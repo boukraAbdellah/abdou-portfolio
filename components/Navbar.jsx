@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Github, Instagram, Linkedin, Menu, X } from "lucide-react";
+import { IoClose, IoMenu } from "react-icons/io5";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full  font-poppins">
+    <nav className="fixed z-50 bg-white w-full  font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex justify-between h-[4.5rem]">
           <div className="flex-shrink-0 flex items-center">
@@ -55,9 +57,9 @@ const Navbar = () => {
               aria-label="Toggle navigation menu"
             >
               {isOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
+                <IoClose className="block h-6 w-6" aria-hidden="true" />
               ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+                <IoMenu className="block h-6 w-6" aria-hidden="true" />
               )}
             </button>
           </div>
@@ -66,8 +68,8 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div
-        className={`sm:hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "h-[90vh] opacity-100" : "max-h-0 opacity-0"
+        className={`sm:hidden z-50 translate-y-6 transition-all duration-500 ease-in-out ${
+          isOpen ? "h-[90vh] opacity-100 translate-y-0" : "max-h-0 opacity-0"
         } overflow-hidden`}
       >
         <div className="px-4 pt-2 pb-3 space-y-2">
@@ -96,19 +98,19 @@ const Navbar = () => {
             href={"/"}
             className="hover:scale-110 transition border-[3px] border-gray-500 rounded-full w-10 h-10 flex-center"
           >
-            <Github className=" block h-5  w-5 text-gray" fill="#f2f2f2" />
+            <FaGithub className=" block h-5  w-5 text-gray" stroke="#333"  />
           </Link>
           <Link
             href={"/"}
             className="hover:scale-110 transition border-[3px] border-gray-500 rounded-full w-10 h-10 flex-center"
           >
-            <Linkedin className=" block h-5  w-5 text-gray" fill="#f2f2f2" />
+            <FaLinkedin className=" block h-5  w-5 text-gray" stroke="#333"  />
           </Link>
           <Link
             href={"/"}
             className="hover:scale-110 transition border-[3px] border-gray-500 rounded-full w-10 h-10 flex-center"
           >
-            <Instagram className=" block h-5  w-5 text-gray" fill="#f2f2f2" />
+            <FaInstagram className=" block h-5  w-5 text-gray" stroke="#333"  />
           </Link>
         </div>
       </div>

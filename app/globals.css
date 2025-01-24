@@ -115,3 +115,7 @@ body {
 .animate-blink {
   animation: blink 1s infinite;
 }
+
+.p-shadow {
+  box-shadow: rgba(26, 122, 240, 0.35) 0px 8px 15px;
+}

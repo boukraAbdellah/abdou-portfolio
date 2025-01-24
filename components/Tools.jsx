@@ -3,7 +3,7 @@ import React from 'react'
 
 const Tools = () => {
   return (
-    <section className=" md:col-span-12 col-span-1 rounded-3xl p-10 bg-white">
+    <section className=" md:col-span-12 col-span-1 rounded-3xl p-10 my-10 bg-white">
       <h2 className=" title">Tools & Technologies</h2>
       <div className="flex gap-10 flex-wrap mt-6">
         <Image className='hover:scale-110 transition-all cursor-pointer' src="/js.png" alt="Javascript" width={70} height={70} />
