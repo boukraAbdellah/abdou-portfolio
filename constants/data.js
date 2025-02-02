@@ -4,7 +4,7 @@ export const projects = [
   {
     name: "Algerian Ecommerce",
     type: "Freelance Project",
-    description: ` A minimal and user-friendly online store for a small jewelry business using Next JS. The website elegantly showcases their unique handcrafted pieces, offering customers a seamless shopping experience that balances style and functionality.`,
+    description: ` A minimal and user-friendly online store for a small jewelry business using Next JS. The website elegantly showcases their unique handcrafted pieces, offering customers a seamless shopping .`,
     technologies: [
       "React Js",
       "tailwind css",

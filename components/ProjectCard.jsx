@@ -10,14 +10,14 @@ const ProjectCard = ({ project , index }) => {
   
   return (
     <div
-      className={`flex flex-col md:flex-row items-center relative my-6 md:my-28  w-full ${
+      className={`flex flex-col md:flex-row items-center relative my-6 md:my-28  w-full max-md:gap-4 ${
         even ? "justify-start " : "justify-end"
       }`}
     >
       {/* Image part j-e */}
       <Link
         href="/"
-        className=" w-[60%] p-shadow rouded-2xl   md:rounded-3xl overflow-hidden"
+        className="max-md:order-2 md:w-[60%] w-full p-shadow rouded-2xl   md:rounded-3xl overflow-hidden"
       >
         <img
           src={image}
@@ -27,35 +27,43 @@ const ProjectCard = ({ project , index }) => {
       </Link>
       {/* Description part */}
       <div
-        className={`flex md:absolute  md:w-[55%] flex-col ${
+        className={`flex max-md:!items-start md:absolute  md:w-[55%] flex-col ${
           even ? "right-0 items-end" : "left-0 items-start"
         } `}
       >
-        <p className=" font-medium text-sm text-[#3053c9]">{type}</p>
-        <h3 className=" font-semibold -mt-1 mb-4 text-xl">{name}</h3>
-        <div className="description p-5 text-end rounded-2xl bg-white">
-          <p className="paragraph !text-sm text-justify">{description}</p>
+        <p className=" font-medium xl:text-base text-sm text-secondary">
+          {type}
+        </p>
+        <h3 className=" font-semibold xl:text-2xl -mt-1 mb-4 text-xl">
+          {name}
+        </h3>
+        <div className="description px-5 py-3 shadow-md text-end rounded-2xl bg-innerbg">
+          <p className="paragraph xl:!text-base !text-sm text-justify">
+            {description}
+          </p>
         </div>
         <div className="flex mt-3 gap-3 flex-wrap">
           {technologies.map((t) => (
             <span
               key={t + name}
-              className="px-2 text-[#222] hover:scale-110 transition-transform py-1 bg-[#f0f0f060] border-2 rounded-2xl text-xs"
+              className="px-2 text-foreground hover:scale-110 transition-transform py-1 bg-[#f0f0f060] dark:bg-outerbg border-2 dark:border-gray-500 rounded-2xl 2xl\:text-sm text-xs"
             >
               {t}
             </span>
           ))}
         </div>
-        <div className=" flex gap-4 mt-3 px-2">
+        <div className=" flex gap-4 items-center mt-3 px-2">
           <a
             href=""
             target="_blank"
-            className="font-poppins px-3 py-1 gap-2 rounded-full text-sm flex items-center bg-[#222] text-white "
+            className="font-poppins px-3 py-1 gap-2 rounded-full dark:border-gray-500 dark:border-2 xl:text-base text-sm flex items-center bg-[#222] text-white "
           >
             <span>Preview</span>
-            <IoEye className="text-white" />
+            <IoEye className="text-white " />
           </a>
-          <FaGithub className="text-2xl" />
+          <a href="">
+            <FaGithub className="text-2xl xl:text-3xl" />
+          </a>
         </div>
       </div>
     </div>

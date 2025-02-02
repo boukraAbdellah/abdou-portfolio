@@ -14,13 +14,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed z-50 bg-white w-full  font-poppins">
+    <nav className="fixed z-50 bg-white dark:bg-outerbg w-full  font-poppins">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex justify-between h-[4.5rem]">
           <div className="flex-shrink-0 flex items-center">
             <Link
               href="/"
-              className="text-2xl uppercase font-bold font-poppins text-gray-800"
+              className="text-2xl uppercase font-bold font-poppins text-gray-800 dark:text-gray-100"
             >
               {"{Abdou}"}
             </Link>
@@ -98,19 +98,19 @@ const Navbar = () => {
             href={"/"}
             className="hover:scale-110 transition border-[3px] border-gray-500 rounded-full w-10 h-10 flex-center"
           >
-            <FaGithub className=" block h-5  w-5 text-gray" stroke="#333"  />
+            <FaGithub className=" block h-5  w-5 text-gray" stroke="#333" />
           </Link>
           <Link
             href={"/"}
             className="hover:scale-110 transition border-[3px] border-gray-500 rounded-full w-10 h-10 flex-center"
           >
-            <FaLinkedin className=" block h-5  w-5 text-gray" stroke="#333"  />
+            <FaLinkedin className=" block h-5  w-5 text-gray" stroke="#333" />
           </Link>
           <Link
             href={"/"}
             className="hover:scale-110 transition border-[3px] border-gray-500 rounded-full w-10 h-10 flex-center"
           >
-            <FaInstagram className=" block h-5  w-5 text-gray" stroke="#333"  />
+            <FaInstagram className=" block h-5  w-5 text-gray" stroke="#333" />
           </Link>
         </div>
       </div>

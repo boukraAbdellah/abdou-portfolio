@@ -5,11 +5,15 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--bg-color)",
+        foreground: "var(--text-color)",
+        innerbg: "var(--inner-bg)",
+        outerbg: "var(--outer-bg)",
+        secondary: "var(--secondary)"
       },
       fontFamily: {
         poppins: "var(--font-poppins)",

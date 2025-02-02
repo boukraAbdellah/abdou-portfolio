@@ -6,14 +6,14 @@ import { FaGithub } from 'react-icons/fa';
 const Projects = () => {
 
   return (
-    <section className="md:p-10 p-5 w-full border-2 my-10">
-      <h2 className="title text-center !font-semibold !text-4xl my-2 ">
+    <section className="md:py-10 py-5 w-full  my-10">
+      <h2 className="title md:text-center !font-semibold md:!text-4xl  my-2 ">
         Projects
       </h2>
-      <p className=" paragraph !text-2xl text-center">
+      <p className=" paragraph md:!text-2xl md:text-center">
         Things I've made trying to put my dent in the universe.
       </p>
-      <div className=" md:px-10 px-5">
+      <div className=" ">
         {projects.map((project, index) => (
           <ProjectCard
             key={project.name + index}
@@ -24,7 +24,7 @@ const Projects = () => {
       </div>
       <div className="text-lg text-center font-poppins">
         See more of my work on{" "}
-        <a href='/' className="font-medium text-[#3053c9]">
+        <a href='/' className="font-medium text-secondary">
           My Github <FaGithub className='inline' />
         </a>
       </div>
