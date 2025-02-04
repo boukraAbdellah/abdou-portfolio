@@ -27,6 +27,10 @@
 
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 /* Custom styles for dark mode */
 .dark {
   --bg-color: var(--color-dark);

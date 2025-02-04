@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { IoClose, IoMenu } from "react-icons/io5";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -18,34 +18,34 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex justify-between h-[4.5rem]">
           <div className="flex-shrink-0 flex items-center">
-            <Link
+            <a
               href="/"
               className="text-2xl uppercase font-bold font-poppins text-gray-800 dark:text-gray-100"
             >
               {"{Abdou}"}
-            </Link>
+            </a>
           </div>
 
           {/* Desktop menu */}
           <div className="hidden uppercase sm:flex sm:items-center sm:gap-4">
-            <Link
-              href="/about"
+            <a
+              href="#about"
               className="px-3 py-1 rounded-md text-base font-medium text-gray-700 nav__item "
             >
               About
-            </Link>
-            <Link
-              href="/projects"
+            </a>
+            <a
+              href="#projects"
               className="px-3 py-1 rounded-md text-base font-medium text-gray-700 nav__item "
             >
               Projects
-            </Link>
-            <Link
-              href="/contact"
+            </a>
+            <a
+              href="#contact"
               className="px-3 py-1 rounded-md text-base font-medium text-gray-700 nav__item"
             >
               Contact
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -73,45 +73,45 @@ const Navbar = () => {
         } overflow-hidden`}
       >
         <div className="px-4 pt-2 pb-3 space-y-2">
-          <Link
-            href="/about"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+          <a
+            href="#about"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:!text-gray-900 dark:text-gray-400 hover:bg-gray-50"
           >
             About
-          </Link>
-          <Link
-            href="/projects"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+          </a>
+          <a
+            href="#projects"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:!text-gray-900 dark:text-gray-400 hover:bg-gray-50"
           >
             Projects
-          </Link>
-          <Link
-            href="/contact"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+          </a>
+          <a
+            href="#contact"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:!text-gray-900 dark:text-gray-400 hover:bg-gray-50"
           >
             Contact
-          </Link>
+          </a>
           <div className=" w-full h-1 bg-gray-300   rounded-full"></div>
         </div>
         <div className=" flex items-center mt-2 ml-5 justify-start gap-3">
-          <Link
+          <a
             href={"/"}
-            className="hover:scale-110 transition border-[3px] border-gray-500 rounded-full w-10 h-10 flex-center"
+            className="hover:scale-110 transition border-[3px] border-gray-500 dark:border-gray-300 rounded-full w-10 h-10 flex-center"
           >
-            <FaGithub className=" block h-5  w-5 text-gray" stroke="#333" />
-          </Link>
-          <Link
+            <FaGithub className=" block h-5  w-5 text-gray-700 dark:text-gray-300 " />
+          </a>
+          <a
             href={"/"}
-            className="hover:scale-110 transition border-[3px] border-gray-500 rounded-full w-10 h-10 flex-center"
+            className="hover:scale-110 transition border-[3px] border-gray-500 dark:border-gray-300 rounded-full w-10 h-10 flex-center"
           >
-            <FaLinkedin className=" block h-5  w-5 text-gray" stroke="#333" />
-          </Link>
-          <Link
+            <FaLinkedinIn className=" block h-5  w-5 text-gray-700 dark:text-gray-300" />
+          </a>
+          <a
             href={"/"}
-            className="hover:scale-110 transition border-[3px] border-gray-500 rounded-full w-10 h-10 flex-center"
+            className="hover:scale-110 transition border-[3px] border-gray-500 dark:border-gray-300 rounded-full w-10 h-10 flex-center"
           >
-            <FaInstagram className=" block h-5  w-5 text-gray" stroke="#333" />
-          </Link>
+            <FaInstagram className=" block h-5  w-5 text-gray-700 dark:text-gray-300" />
+          </a>
         </div>
       </div>
     </nav>

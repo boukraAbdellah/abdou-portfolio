@@ -6,7 +6,7 @@ import { FaGithub } from 'react-icons/fa';
 const Projects = () => {
 
   return (
-    <section className="md:py-10 py-5 w-full  my-10">
+    <section id='projects' className="md:py-10 py-5 w-full  my-10">
       <h2 className="title md:text-center !font-semibold md:!text-4xl  my-2 ">
         Projects
       </h2>
