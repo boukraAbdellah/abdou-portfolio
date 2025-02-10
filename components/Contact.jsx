@@ -22,19 +22,22 @@ const Contact = () => {
         </p>
         <div className="flex gap-4 md:mt-4 text-secondary">
           <Link
-            href="/"
+            href="https://github.com/boukraAbdellah"
+            target="_blank"
             className="hover:bg-blue-400/30 hover:text-gray-950  transition-all p-2 text-xl border-2 border-gray-300/70 rounded-full"
           >
             <FaGithub />
           </Link>
           <Link
-            href="/"
+            href="https://www.linkedin.com/in/abdellah-boukra-bettayeb-70b78514b/"
+            target="_blank"
             className="hover:bg-blue-400/30 hover:text-gray-950  transition-all p-2 text-xl border-2 border-gray-300/70 rounded-full"
           >
             <FaLinkedinIn />
           </Link>
           <Link
-            href="/"
+            href="https://www.instagram.com/b.b.abdellah/"
+            target="_blank"
             className="hover:bg-blue-400/30 hover:text-gray-950  transition-all p-2 text-xl border-2 border-gray-300/70 rounded-full"
           >
             {" "}
@@ -55,23 +58,23 @@ const Contact = () => {
             className="flex-1 px-8 bg-innerbg focus:outline-none border-2 dark:border-gray-600/60  focus:border-[#06b8ff88] py-5 md:rounded-3xl rounded-2xl"
           />
         </div>
-        <div className="p-0  overflow-hidden relative">
+        <div className="p-0 h-32 md:h-52 overflow-hidden relative">
           <textarea
             name="message"
             id="message"
             placeholder="Message"
-            className="w-full h-32 bg-innerbg md:h-52 px-8 border-2 !outline-none transition-border dark:border-gray-600/60  focus:border-[#06b8ff88] py-8 md:rounded-3xl rounded-2xl"
+            className="w-full  bg-innerbg h-full px-8 border-2 !outline-none transition-border dark:border-gray-600/60  focus:border-[#06b8ff88] py-8 md:rounded-3xl rounded-2xl"
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
           ></textarea>
           <div
             className={`absolute ${
               isFocused && "border-[#06b8ff88]"
-            } -bottom-2 mb-3 right-0 dark:border-gray-600/60 rounded-tl-3xl bg-outerbg border-t-2 border-l-2 p-3 `}
+            } bottom-0  right-0 dark:border-gray-600/60 rounded-tl-3xl bg-outerbg border-t-2 border-l-2 md:p-3 p-1 `}
           >
             <button
               id="btn-btn"
-              className="!text-white !rounded-full !px-5 btn-primary flex gap-2 items-center"
+              className="!text-white !rounded-full  btn-primary flex gap-2 items-center"
             >
               Send <IoSend />
             </button>

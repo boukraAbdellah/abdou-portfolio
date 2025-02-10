@@ -6,7 +6,7 @@ import { FaGithub } from 'react-icons/fa';
 const Projects = () => {
 
   return (
-    <section id='projects' className="md:py-10 py-5 w-full  my-10">
+    <section id="projects" className="md:py-10 py-5 w-full  my-10">
       <h2 className="title md:text-center !font-semibold md:!text-4xl  my-2 ">
         Projects
       </h2>
@@ -24,8 +24,11 @@ const Projects = () => {
       </div>
       <div className="text-lg text-center font-poppins">
         See more of my work on{" "}
-        <a href='/' className="font-medium text-secondary">
-          My Github <FaGithub className='inline' />
+        <a
+          href="https://github.com/boukraAbdellah"
+          className="font-medium text-secondary"
+        >
+          My Github <FaGithub className="inline" />
         </a>
       </div>
     </section>

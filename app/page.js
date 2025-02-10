@@ -16,7 +16,7 @@ export default function Home() {
       <Floating />
       <Mode />
       <Hero />
-      <div className=" w-full bg-outerbg font-poppins lg:!px-52 lg:!pt-20 p-10   ">
+      <div className=" w-full bg-outerbg font-poppins lg:!px-52 lg:!pt-20 md:p-10 px-5 pt-12   ">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <About />
           <Education />

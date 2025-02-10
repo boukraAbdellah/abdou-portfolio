@@ -95,19 +95,21 @@ const Navbar = () => {
         </div>
         <div className=" flex items-center mt-2 ml-5 justify-start gap-3">
           <a
-            href={"/"}
+            href={"https://github.com/boukraAbdellah"}
             className="hover:scale-110 transition border-[3px] border-gray-500 dark:border-gray-300 rounded-full w-10 h-10 flex-center"
           >
             <FaGithub className=" block h-5  w-5 text-gray-700 dark:text-gray-300 " />
           </a>
           <a
-            href={"/"}
+            href={
+              "https://www.linkedin.com/in/abdellah-boukra-bettayeb-70b78514b/"
+            }
             className="hover:scale-110 transition border-[3px] border-gray-500 dark:border-gray-300 rounded-full w-10 h-10 flex-center"
           >
             <FaLinkedinIn className=" block h-5  w-5 text-gray-700 dark:text-gray-300" />
           </a>
           <a
-            href={"/"}
+            href={"https://www.instagram.com/b.b.abdellah/"}
             className="hover:scale-110 transition border-[3px] border-gray-500 dark:border-gray-300 rounded-full w-10 h-10 flex-center"
           >
             <FaInstagram className=" block h-5  w-5 text-gray-700 dark:text-gray-300" />

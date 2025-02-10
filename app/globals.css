@@ -93,7 +93,7 @@ body {
 }
 
 .btn-primary {
-  @apply py-2 px-4 bg-[#3053c9]  hover:bg-[#2144b8];
+  @apply md:py-2 md:px-4 py-1 px-2 bg-[#3053c9]  hover:bg-[#2144b8];
   border-radius: 5px;
   transition: all .3s ease;
 }

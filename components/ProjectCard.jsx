@@ -61,7 +61,7 @@ const ProjectCard = ({ project , index }) => {
             <span>Preview</span>
             <IoEye className="text-white " />
           </a>
-          <a href="">
+          <a href="https://github.com/boukraAbdellah">
             <FaGithub className="text-2xl xl:text-3xl" />
           </a>
         </div>

@@ -33,10 +33,11 @@ const Education = () => {
                   </div>
                 </div>
               </div>
-              <div className="max-md:mt-10  ">
+              <div className="max-md:mt-10   ">
                 <button className="btn-primary flex items-center gap-3 !bg-secondary text-[#f4f4f4] dark:text-outerbg font-poppins font-medium">
                   Download CV <IoDocument />{" "}
-                </button>            </div>
+          </button>
+        </div>
         </div>
       </section>
   )
