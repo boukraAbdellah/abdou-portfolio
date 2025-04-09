@@ -1,62 +1,22 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { motion } from "framer-motion"
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import { GoArrowUpRight } from "react-icons/go";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
-
-
-
-// Sample projects data - replace with your own
-const projects = [
-  {
-    id: "project-1",
-    title: "E-Commerce Dashboard",
-    description:
-      "A comprehensive dashboard for managing online stores with real-time analytics and inventory management.",
-    tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-    image: "/image.png",
-    link: "https://example.com/project1",
-    github: "https://github.com/yourusername/project1",
-    featured: true,
-  },
-  {
-    id: "project-2",
-    title: "AI Content Generator",
-    description:
-      "An AI-powered application that generates marketing content based on user prompts and brand guidelines.",
-    tags: ["Next.js", "OpenAI", "TypeScript", "Prisma"],
-    image: "/image.png",
-    link: "https://example.com/project2",
-    github: "https://github.com/yourusername/project2",
-    featured: true,
-  },
-  {
-    id: "project-3",
-    title: "Fitness Tracking App",
-    description:
-      "A mobile-first application for tracking workouts, nutrition, and progress with personalized recommendations.",
-    tags: ["React Native", "Firebase", "Redux", "Expo"],
-    image: "/image.png",
-    link: "https://example.com/project3",
-    github: "https://github.com/yourusername/project3",
-    featured: true,
-  },
-];
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { projects } from "../constants/data"; // Import the projects array from data.js
 
 export default function FeaturedProjects() {
-  const featuredProjects = projects.filter((p) => p.featured);
+  // Filter featured projects if needed (e.g., based on a "featured" property)
+  const featuredProjects = projects; // Use the entire array or filter if necessary
 
   return (
-    <section id="projects" className="py-24 bg-gradient-to-b from-background to-background/80 relative overflow-hidden">
-      {/* Background decorative elements */}
-      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[30%] -right-[10%] w-[40%] h-[70%] rounded-full bg-gradient-to-b from-purple-500/10 to-transparent blur-3xl" />
-        <div className="absolute -bottom-[30%] -left-[10%] w-[40%] h-[70%] rounded-full bg-gradient-to-t from-emerald-500/10 to-transparent blur-3xl" />
-      </div> */}
-
+    <section
+      id="projects"
+      className="py-24 bg-gradient-to-b from-background to-background/80 relative overflow-hidden"
+    >
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center mb-12 text-center">
           <motion.h2
@@ -84,7 +44,7 @@ export default function FeaturedProjects() {
         <div className="mt-16 space-y-16">
           {featuredProjects.map((project, index) => (
             <motion.div
-              key={project.id}
+              key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -99,7 +59,7 @@ export default function FeaturedProjects() {
                   <div className="aspect-video relative overflow-hidden rounded-xl group-hover:shadow-xl transition-all duration-300">
                     <Image
                       src={project.image || "/placeholder.svg"}
-                      alt={project.title}
+                      alt={project.name}
                       fill
                       className="object-cover transform group-hover:scale-105 transition-transform duration-500"
                     />
@@ -119,7 +79,7 @@ export default function FeaturedProjects() {
                         </Link>
                       )}
                       <Link
-                        href={project.link}
+                        href={project.link || "#"}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 rounded-full bg-white/80 dark:bg-gray-900/80 hover:bg-white dark:hover:bg-gray-900 transition-colors"
@@ -136,7 +96,7 @@ export default function FeaturedProjects() {
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <h3 className="text-2xl md:text-3xl font-bold group-hover:text-secondary dark:group-hover:text-secondary transition-colors">
-                        {project.title}
+                        {project.name}
                       </h3>
                       <GoArrowUpRight className="h-5 w-5 text-gray-500 dark:text-gray-400 group-hover:text-secondary dark:group-hover:text-secondary transition-colors" />
                     </div>
@@ -146,19 +106,19 @@ export default function FeaturedProjects() {
                   </div>
 
                   <div className="flex flex-wrap gap-2 pt-2">
-                    {project.tags.map((tag) => (
+                    {project.technologies.map((tech) => (
                       <span
-                        key={tag}
+                        key={tech}
                         className="px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
                       >
-                        {tag}
+                        {tech}
                       </span>
                     ))}
                   </div>
 
                   <div className="pt-4">
                     <Link
-                      href={project.link}
+                      href={project.link || "#"}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-secondary dark:text-secondary hover:text-secondary dark:hover:text-purple-300 font-medium transition-colors"
@@ -177,8 +137,6 @@ export default function FeaturedProjects() {
             </motion.div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );

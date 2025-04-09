@@ -26,7 +26,7 @@ const Mode = () => {
 
   return (
     <button
-      className="fixed bottom-8 right-8 border-2 cursor-pointer w-16 h-16 bg-gray-800 rounded-full flex justify-center items-center"
+      className="fixed hidden  bottom-8 right-8 border-2 cursor-pointer w-16 h-16 bg-gray-800 rounded-full z-50 sm:flex justify-center items-center"
       onClick={handleClick}
     >
       <div

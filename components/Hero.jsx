@@ -107,9 +107,9 @@ const Hero = () => {
         <div className="absolute -top-[30%] -right-[10%] w-[40%] h-[70%] rounded-full bg-gradient-to-b from-purple-500/10 to-transparent blur-3xl" />
         <div className="absolute -bottom-[30%] -left-[10%] w-[40%] h-[70%] rounded-full bg-gradient-to-t from-emerald-500/10 to-transparent blur-3xl" />
       </div>
-      <div className=" lg:!px-40 md:px-32 px-12 xl:p-0 xl:max-w-7xl xl:mx-auto h-full max-md:flex-col  flex items-center">
-        <div className="flex-1">
-          <p className=" text-2xl text-secondary font-medium ">
+      <div className=" lg:!px-40 md:px-32 px-6 xl:p-0 xl:max-w-7xl xl:mx-auto max-md:h-[100vh] max-md:justify-center max-md:gap-6 h-full max-md:flex-col  flex items-center">
+        <div className="md:flex-1">
+          <p className=" text-2xl max-md:text-xl text-secondary font-medium ">
             Welcome to my portfolio 👋
           </p>
           <h1 className="xl:text-5xl md:text-4xl text-3xl font-semibold my-5">
@@ -139,9 +139,9 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="order-1 flex-1 lg:order-2 ml-20 flex justify-center"
+          className="order-1 md:flex-1 lg:order-2 md:ml-20 flex h-fit justify-center"
         >
-          <div className="relative max-w-md w-full">
+          <div className="relative max-w-md h-fit w-full">
             <div
               ref={terminalRef}
               className="w-full bg-[#0f172a] rounded-lg border border-[#334155] shadow-[0_0_30px_rgba(56,189,248,0.15)] overflow-hidden"
