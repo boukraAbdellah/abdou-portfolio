@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Tools = () => {
   const [tooltip, setTooltip] = useState({
@@ -51,15 +52,35 @@ const Tools = () => {
 
   return (
     <section className="md:col-span-12 col-span-1 rounded-3xl p-10 my-10 bg-innerbg relative">
-      <h2 className="title">Tools & Technologies</h2>
-      <div className="flex lg:gap-10 gap-6 flex-wrap mt-6">
+      <motion.h2
+        className="title"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Tools & Technologies
+      </motion.h2>
+      <motion.div
+        className="flex lg:gap-10 gap-6 flex-wrap mt-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, staggerChildren: 0.2 }}
+      >
         {tools.map((tool, index) => (
-          <div
+          <motion.div
             key={index}
             className="relative"
             onMouseEnter={(e) => handleMouseEnter(e, tool.alt)}
             onMouseLeave={handleMouseLeave}
             onMouseMove={handleMouseMove}
+            whileHover={{
+              scale: 1.2,
+              rotate: 10,
+              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+            }}
+            initial={{ opacity: 0, y: 20, rotate: -10 }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <Image
               className="hover:scale-110 transition-all cursor-pointer h-auto max-md:max-w-[40px]"
@@ -68,20 +89,23 @@ const Tools = () => {
               width={70}
               height={70}
             />
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       {tooltip.visible && (
-        <div
+        <motion.div
           className="fixed bg-black text-white px-3 py-1 rounded-lg text-sm pointer-events-none transition-opacity duration-300"
           style={{
             left: `${tooltip.x}px`,
             top: `${tooltip.y + 20}px`,
             transform: "translate(-50%, 0)",
           }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
         >
           {tooltip.text}
-        </div>
+        </motion.div>
       )}
     </section>
   );

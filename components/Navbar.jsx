@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { IoClose, IoMenu } from "react-icons/io5";
-import { FaGithub, FaInstagram, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
+import { IoClose, IoCode, IoMenu } from "react-icons/io5";
+import { FaCode, FaGithub, FaInstagram, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -18,12 +18,17 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex justify-between h-[4.5rem]">
           <div className="flex-shrink-0 flex items-center">
-            <a
+            <Link
               href="/"
-              className="text-2xl uppercase font-bold font-poppins text-gray-800 dark:text-gray-100"
+              className="text-2xl font-bold relative z-10 group flex items-center"
             >
-              {"{Abdou}"}
-            </a>
+              <FaCode className="w-6 h-6 mr-2 text-[#38bdf8]" />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#38bdf8] to-[#4ade80]">
+                Abdellah
+              </span>
+              <span className="dark:text-white">.</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-[#38bdf8] to-[#4ade80] transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </div>
 
           {/* Desktop menu */}
