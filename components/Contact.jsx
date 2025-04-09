@@ -14,7 +14,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className=" md:p-7 lg:p-10">
-      <div className="w-full md:rounded-3xl rounded-2xl p-7 bg-innerbg  ">
+      <div className="w-full md:rounded-3xl rounded-2xl px-4 py-6 md:p-7 bg-innerbg  ">
         <h2 className="title !font-bold">Let's Connect</h2>
         <p className="paragraph md:!text-xl md:my-3">
           I would love to hear from you and discuss any potential opportunities
@@ -46,16 +46,16 @@ const Contact = () => {
         </div>
       </div>
       <form>
-        <div className="flex flex-col md:flex-row gap-6 px my-6">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-6 my-3 md:my-6">
           <input
             type="text"
             placeholder="Name"
-            className="flex-1 px-8 bg-innerbg  focus:outline-none border-2 dark:border-gray-600/60  focus:border-[#06b8ff88] py-5 md:rounded-3xl rounded-2xl"
+            className="flex-1 px-4 py-3 md:px-8 bg-innerbg  focus:outline-none border-2 dark:border-gray-600/60  focus:border-[#06b8ff88] md:py-5 md:rounded-3xl rounded-2xl"
           />
           <input
             type="text"
             placeholder="Email"
-            className="flex-1 px-8 bg-innerbg focus:outline-none border-2 dark:border-gray-600/60  focus:border-[#06b8ff88] py-5 md:rounded-3xl rounded-2xl"
+            className="flex-1 p-4 md:px-8 bg-innerbg focus:outline-none border-2 dark:border-gray-600/60  focus:border-[#06b8ff88] md:py-5 py-3 md:rounded-3xl rounded-2xl"
           />
         </div>
         <div className="p-0 h-32 md:h-52 overflow-hidden relative">
@@ -63,7 +63,7 @@ const Contact = () => {
             name="message"
             id="message"
             placeholder="Message"
-            className="w-full  bg-innerbg h-full px-8 border-2 !outline-none transition-border dark:border-gray-600/60  focus:border-[#06b8ff88] py-8 md:rounded-3xl rounded-2xl"
+            className="w-full  bg-innerbg h-full p-4 md:px-8 border-2 !outline-none transition-border dark:border-gray-600/60  focus:border-[#06b8ff88] py-4 md:py-8 md:rounded-3xl rounded-2xl"
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
           ></textarea>

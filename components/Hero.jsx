@@ -1,15 +1,9 @@
 "use client"
 import React, { useEffect, useRef } from 'react'
-import Typewriter from './Typewriter';
 import {motion} from 'motion/react'
 
 const Hero = () => {
-  const strings = [
-    "I'm a developer.",
-    "Freelancer",
-    "Web Developer",
-    "Frontend & Backend",
-  ];
+  
 
   const terminalRef = useRef(null);
 
@@ -102,8 +96,8 @@ const Hero = () => {
   }, []);
   
   return (
-    <section className="font-poppins w-full  h-[100vh] ">
-      <div className="absolute inset-0 overflow-hidden bg-outerbg !-z-30 pointer-events-none">
+    <section className="font-poppins w-full  h-[100dvh] ">
+      <div className="absolute inset-0 overflow-hidden h-full bg-outerbg !-z-30 pointer-events-none">
         <div className="absolute -top-[30%] -right-[10%] w-[40%] h-[70%] rounded-full bg-gradient-to-b from-purple-500/10 to-transparent blur-3xl" />
         <div className="absolute -bottom-[30%] -left-[10%] w-[40%] h-[70%] rounded-full bg-gradient-to-t from-emerald-500/10 to-transparent blur-3xl" />
       </div>
@@ -112,18 +106,14 @@ const Hero = () => {
           <p className=" text-2xl max-md:text-xl text-secondary font-medium ">
             Welcome to my portfolio 👋
           </p>
-          <h1 className="xl:text-5xl md:text-4xl text-3xl font-semibold my-5">
-            Boukra Abdellah
+          <h1 className="xl:text-5xl md:text-4xl text-3xl font-semibold my-2 md:my-5">
+            Abdellah Boukra
           </h1>
-          {/* <Typewriter
-            strings={strings}
-            className="font-poppins  font-medium text-3xl "
-            typingSpeed={40}
-            deletingSpeed={30}
-          /> */}
+
           <p className="paragraph  mb-5 !text-lg font-poppins">
-            Fullstack developer specializing in creating robust, scalable
-            applications with clean code and exceptional user experiences.{" "}
+            I design and build clean, modern websites that bring your ideas to
+            life. Whether you need a portfolio, business site, or custom
+            solution — I'm here to make it happen.
           </p>
           <div className="flex gap-3 items-center">
             <a

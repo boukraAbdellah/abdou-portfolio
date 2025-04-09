@@ -51,7 +51,7 @@ const Tools = () => {
   };
 
   return (
-    <section className="md:col-span-12 col-span-1 rounded-3xl p-10 my-10 bg-innerbg relative">
+    <section className="md:col-span-12 col-span-1 rounded-3xl  p-6 sm:p-10  my-10 bg-innerbg relative">
       <motion.h2
         className="title"
         initial={{ opacity: 0, y: -20 }}

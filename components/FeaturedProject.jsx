@@ -33,7 +33,7 @@ export default function FeaturedProjects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="max-w-2xl text-gray-500 dark:text-gray-400 text-lg"
+            className="max-w-2xl text-gray-500 dark:text-gray-400 text-base md:text-lg"
           >
             A curated selection of my most impactful and innovative projects,
             showcasing my skills and passion for creating exceptional digital
@@ -100,12 +100,12 @@ export default function FeaturedProjects() {
                       </h3>
                       <GoArrowUpRight className="h-5 w-5 text-gray-500 dark:text-gray-400 group-hover:text-secondary dark:group-hover:text-secondary transition-colors" />
                     </div>
-                    <p className="text-gray-500 dark:text-gray-400 text-lg">
+                    <p className="text-gray-500 dark:text-gray-400 text-sm md:text-lg">
                       {project.description}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-2 pt-2">
+                  <div className="flex flex-wrap gap-2 pt-1 md:pt-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
@@ -116,7 +116,7 @@ export default function FeaturedProjects() {
                     ))}
                   </div>
 
-                  <div className="pt-4">
+                  <div className="md:pt-4 pt-2">
                     <Link
                       href={project.link || "#"}
                       target="_blank"
