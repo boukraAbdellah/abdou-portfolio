@@ -96,7 +96,7 @@ const Hero = () => {
   }, []);
   
   return (
-    <section className="font-poppins w-full  h-[100dvh] ">
+    <section className="font-poppins w-full  h-[100lvh] ">
       <div className="absolute inset-0 overflow-hidden h-full bg-outerbg !-z-30 pointer-events-none">
         <div className="absolute -top-[30%] -right-[10%] w-[40%] h-[70%] rounded-full bg-gradient-to-b from-purple-500/10 to-transparent blur-3xl" />
         <div className="absolute -bottom-[30%] -left-[10%] w-[40%] h-[70%] rounded-full bg-gradient-to-t from-emerald-500/10 to-transparent blur-3xl" />

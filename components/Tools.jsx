@@ -24,6 +24,8 @@ const Tools = () => {
     { src: "/icons8-mysql-logo.svg", alt: "MySQL" },
     { src: "/icons8-tailwind-css.svg", alt: "Tailwindcss" },
     { src: "/icons8-git.svg", alt: "Git" },
+    {src: "/icons8-docker.svg", alt: "Docker" },
+    {src: "/icons8-spring-boot.svg", alt: "spring boot" },
   ];
 
   const handleMouseEnter = (event, alt) => {

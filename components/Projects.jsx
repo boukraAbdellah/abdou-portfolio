@@ -20,7 +20,7 @@ const Projects = () => {
             project={project}
             index={index}
           />
-        ))}
+      ))}
       </div>
       <div className="text-lg text-center font-poppins">
         See more of my work on{" "}

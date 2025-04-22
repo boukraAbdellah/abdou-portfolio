@@ -6,11 +6,22 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { GoArrowUpRight } from "react-icons/go";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import { projects } from "../constants/data"; // Import the projects array from data.js
+import { projects } from "../constants/data";
+import LoadingModal from "./LoadingModal";
 
 export default function FeaturedProjects() {
-  // Filter featured projects if needed (e.g., based on a "featured" property)
-  const featuredProjects = projects; // Use the entire array or filter if necessary
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const featuredProjects = projects;
+
+  const handleProjectClick = (project) => {
+    if (project.withBackend) {
+      setSelectedProject(project);
+      setModalOpen(true);
+    } else {
+      window.open(project.link, "_blank");
+    }
+  };
 
   return (
     <section
@@ -78,15 +89,13 @@ export default function FeaturedProjects() {
                           <span className="sr-only">GitHub Repository</span>
                         </Link>
                       )}
-                      <Link
-                        href={project.link || "#"}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={() => handleProjectClick(project)}
                         className="p-2 rounded-full bg-white/80 dark:bg-gray-900/80 hover:bg-white dark:hover:bg-gray-900 transition-colors"
                       >
                         <FaExternalLinkAlt className="h-5 w-5" />
                         <span className="sr-only">Live Demo</span>
-                      </Link>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -117,15 +126,13 @@ export default function FeaturedProjects() {
                   </div>
 
                   <div className="md:pt-4 pt-2">
-                    <Link
-                      href={project.link || "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      onClick={() => handleProjectClick(project)}
                       className="inline-flex items-center gap-2 text-secondary dark:text-secondary hover:text-secondary dark:hover:text-purple-300 font-medium transition-colors"
                     >
                       View Project
                       <GoArrowUpRight className="h-4 w-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -138,6 +145,14 @@ export default function FeaturedProjects() {
           ))}
         </div>
       </div>
+
+      {/* Loading Modal */}
+      <LoadingModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        projectName={selectedProject?.name || ""}
+        projectLink={selectedProject?.link || "#"}
+      />
     </section>
   );
 }
