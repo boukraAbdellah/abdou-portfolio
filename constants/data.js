@@ -25,18 +25,18 @@ export const projects = [
     link: "https://youcef-portolio.onrender.com",
   },
   {
-    name: "Algerian Ecommerce",
+    name: "Clothing Shop",
     type: "Freelance Project",
     description: `A tailored Cash On Delivery Ecommerce platform designed specifically for the Algerian market, providing a seamless and efficient shopping experience.`,
     technologies: [
       "React Js",
       "tailwind css",
       "express js",
-      "Node Js",
+      "Cloudinary",
       "Mongodb",
     ],
-    image: "/image.png",
-    link: "https://ecom-05jt.onrender.com",
+    image: "/cloth-2.png",
+    link: "https://abdou-shop-ecom.vercel.app/",
     withBackend: true,
   },
 ];
